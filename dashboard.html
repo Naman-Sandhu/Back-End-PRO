@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dashboard — Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="brand">
+      <span class="dot pulse"></span>
+      <span class="brand-name">Ledger</span>
+    </div>
+    <div class="nav-links">
+      <a href="dashboard.html" class="nav-link active">Dashboard</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="index.html" class="nav-link">Log out</a>
+      <div class="avatar" id="nav-avatar">A</div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="head-row">
+      <div>
+        <h1>Your subscriptions</h1>
+        <p class="sub">5 active plans · next charge in 3 days</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Monthly total</span>
+        <span id="total" class="mono stat-value">₹0</span>
+      </div>
+    </div>
+
+    <div id="sub-grid" class="sub-grid"></div>
+
+    <section class="detail-panel" id="detail-panel">
+      <div class="detail-empty" id="detail-empty">Select a subscription to see its billing history</div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

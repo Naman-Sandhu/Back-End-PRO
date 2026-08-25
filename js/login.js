@@ -54,8 +54,9 @@ form.addEventListener("submit", (e) => {
     const success = Math.random() > 0.15;
     if (success) {
       submitBtn.innerHTML = "✓ Welcome back";
-      // real redirect once you wire up a real backend:
-      // window.location.href = "dashboard.html";
+      setTimeout(() => {
+        window.location.href = "dashboard.html";
+      }, 600);
     } else {
       submitBtn.classList.add("failed");
       submitBtn.innerHTML = "Couldn't sign in — check your details";

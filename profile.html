@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Profile — Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/profile.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="brand">
+      <span class="dot pulse"></span>
+      <span class="brand-name">Ledger</span>
+    </div>
+    <div class="nav-links">
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+      <a href="profile.html" class="nav-link active">Profile</a>
+      <a href="index.html" class="nav-link">Log out</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <div class="profile-grid">
+
+      <section class="card">
+        <div class="avatar-big" id="avatar-big">A</div>
+        <h2 id="display-name">Aman Sharma</h2>
+        <p class="muted" id="display-email">aman@example.com</p>
+        <div class="badge-row">
+          <span class="badge">5 active plans</span>
+          <span class="badge">Member since 2025</span>
+        </div>
+      </section>
+
+      <section class="card form-card">
+        <h3>Account details</h3>
+        <form id="profile-form">
+          <label>
+            <span>Full name</span>
+            <input id="name" type="text" value="Aman Sharma" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input id="email" type="email" value="aman@example.com" />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input id="phone" type="tel" value="+91 98765 43210" />
+          </label>
+          <button type="submit" class="btn-primary" id="save-btn">Save changes</button>
+          <span id="save-status" class="save-status"></span>
+        </form>
+      </section>
+
+      <section class="card">
+        <h3>Payment method</h3>
+        <div class="pm-row">
+          <div class="pm-card">
+            <span class="pm-type">VISA</span>
+            <span class="mono">•••• 4242</span>
+          </div>
+          <button class="btn-ghost">Update card</button>
+        </div>
+        <p class="muted small">Used for all subscription charges below.</p>
+      </section>
+
+      <section class="card">
+        <h3>Billing summary</h3>
+        <div class="summary-row"><span>Active subscriptions</span><span class="mono">5</span></div>
+        <div class="summary-row"><span>Monthly total</span><span class="mono" id="summary-total">₹0</span></div>
+        <div class="summary-row"><span>Failed payments (30d)</span><span class="mono" style="color:var(--amber)">1</span></div>
+        <a href="dashboard.html" class="link-btn">View all subscriptions →</a>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/profile.js"></script>
+</body>
+</html>
